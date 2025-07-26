@@ -1,0 +1,34 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Contacts Api",
+    "description": "Contact Api",
+    "version": "1.0.0"
+  },
+  "host": "project2-5i91.onrender.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

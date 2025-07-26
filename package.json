@@ -1,0 +1,27 @@
+{
+  "name": "cse-341-project2",
+  "version": "1.0.0",
+  "description": "My Second Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanoxeant/cse-341-project2.git"
+  },
+  "author": "Jean Oxeant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanoxeant/cse-341-project2/issues"
+  },
+  "homepage": "https://github.com/jeanoxeant/cse-341-project2#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mongodb": "^6.18.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  }
+}

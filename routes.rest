@@ -10,24 +10,22 @@ POST http://localhost:8000/products HTTP/1.1
 content-type: application/json
 
  {
-   "firstName": "Joshua",
-   "lastName": "Ocean",
-   "email": "joshuaocean@gmail.com",
-   "favoriteColor": "red",
-   "birthday": "12-12-1986"
+    "name": "4K Monitor",
+    "price": 200,
+    "quantity": 5,
+    "brand": "Dell"
  }
 
 ### PUT product
-PUT http://localhost:8000/products/ HTTP/1.1
+PUT http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1
 content-type: application/json
 
 {
-   "firstName": "Joshua",
-   "lastName": "Ocean",
-   "email": "joshuaocean@gmail.com",
-   "favoriteColor": "red",
-   "birthday": "12-12-1986"
+   "name": "5K Monitor",
+    "price": 200,
+    "quantity": 5,
+    "brand": "Dell"
 }
 
 ### Delete product
-DELETE http://localhost:8000/products/ HTTP/1.1
+DELETE http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1

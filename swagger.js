@@ -3,7 +3,7 @@
  const doc = {
     info: {
         title: 'Products Api',
-        description: 'Contact Api'
+        description: 'Customer Api'
     },
     host: 'localhost:8000',
     schemes: ['https', 'http']

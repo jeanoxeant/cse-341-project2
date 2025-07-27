@@ -1,6 +1,7 @@
 const router = require('express').Router();
 router.post('/', (req, res) => {
   res.send('New product added');
+  res.send('New customer added');
 });
 
 
@@ -12,5 +13,6 @@ router.get('/', (req, res) => {
 });
 
 router.use('/products', require('./products'));
+router.use('/customers', require('./customers'));
 
 module.exports = router;

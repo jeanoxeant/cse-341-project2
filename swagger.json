@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Contacts Api",
-    "description": "Contact Api",
+    "title": "Products Api",
+    "description": "Customer Api",
     "version": "1.0.0"
   },
   "host": "project2-5i91.onrender.com",

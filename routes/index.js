@@ -4,7 +4,6 @@ router.post('/', (req, res) => {
   res.send('New customer added');
 });
 
-
 router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {

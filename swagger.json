@@ -1,7 +1,12 @@
 {
   "swagger": "2.0",
-  "info": {
+  "info1": {
     "title": "Products Api",
+    "description": "Product Api",
+    "version": "1.0.0"
+  },
+  "info2": {
+    "title": "Customers Api",
     "description": "Customer Api",
     "version": "1.0.0"
   },

@@ -29,7 +29,7 @@ const createProduct = async (req, res) => {
         quantity: req.body.quantity,
         brand: req.body.brand
     };
-    const response = await mongodb.getDatabase().db().collection('contacts').insertOne(product);
+    const response = await mongodb.getDatabase().db().collection('products').insertOne(product);
     if (response.acknowledged) {
         res.status(204).send();
     } else{

@@ -45,7 +45,7 @@ const updateCustomer = async (req, res) => {
         email: req.body.email,
         phone: req.body.phone
     };
-    const response = await mongodb.getDatabase().db().collection('customers').replaceOne({_id: customerId}, contact);
+    const response = await mongodb.getDatabase().db().collection('customers').replaceOne({_id: customerId}, customer);
         if (response.modifiedCount > 0) {
         res.status(204).send();
     } else{

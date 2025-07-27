@@ -15,23 +15,23 @@ GET http://localhost:8000/customers/
 POST http://localhost:8000/products HTTP/1.1
 content-type: application/json
 
- {
-    "name": "4K Monitor",
-    "price": 200,
-    "quantity": 5,
-    "brand": "Dell"
- }
+{
+   "name": "4K Monitor",
+   "price": 200,
+   "quantity": 5,
+   "brand": "Dell"
+}
 
- ### Create customer
+### Create customer
 POST http://localhost:8000/customer HTTP/1.1
 content-type: application/json
 
- {
-      "firstName": "Jonas",
-      "lastName": "Pierre",
-      "email": "jonaspierre@gmail.com",
-      "phone": "8294825123"
- }
+{
+   "firstName": "Jonas",
+   "lastName": "Pierre",
+   "email": "jonaspierre@gmail.com",
+   "phone": "8294825123"
+}
 
 ### PUT product
 PUT http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1

@@ -120,6 +120,27 @@
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "quantity": {
+                  "example": "any"
+                },
+                "brand": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {

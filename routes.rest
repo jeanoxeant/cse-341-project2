@@ -2,14 +2,8 @@
 ### Get all products
 GET http://localhost:8000/products
 
-### Get all customers
-GET http://localhost:8000/customers
-
 ### Get products by id
 GET http://localhost:8000/products/
-
-### Get customers by id
-GET http://localhost:8000/customers/
 
 ### Create product
 POST http://localhost:8000/products HTTP/1.1
@@ -22,8 +16,8 @@ content-type: application/json
    "brand": "Dell"
 }
 
-### Create customer
-POST http://localhost:8000/customer HTTP/1.1
+### PUT product
+PUT http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1
 content-type: application/json
 
 {
@@ -33,8 +27,23 @@ content-type: application/json
    "phone": "8294825123"
 }
 
-### PUT product
-PUT http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1
+### Delete product
+DELETE http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1
+
+
+
+
+### Get all customers
+GET http://localhost:8000/customers
+
+### Get customers by id
+GET http://localhost:8000/customers/
+
+### Get customers by id
+GET http://localhost:8000/customers/
+
+### Create customer
+POST http://localhost:8000/customer HTTP/1.1
 content-type: application/json
 
 {
@@ -54,9 +63,6 @@ content-type: application/json
    "email": "jonaspierre@gmail.com",
    "phone": "8294825123"
 }
-
-### Delete product
-DELETE http://localhost:8000/products/6881670ab02df759c06982ff HTTP/1.1
 
 ### Delete customer
 DELETE http://localhost:8000/customers/6881874db02df759c0698303 HTTP/1.1

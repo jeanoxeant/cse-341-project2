@@ -23,7 +23,7 @@ app
     secret: process.env.SESSION_SECRET || "secret",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL });
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
 }));
 
 const MongoStore = require('connect-mongo');

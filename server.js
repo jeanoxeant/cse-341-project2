@@ -16,7 +16,15 @@ const app = express();
 const port = process.env.PORT || 8000;
 
 //app.use(bodyParser.json());
+const MongoStore = require('connect-mongo');
 
+app
+.use(session({
+    secret: process.env.SESSION_SECRET || "secret",
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
+}))
 
 
 app

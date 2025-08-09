@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 const getProductsController = require('../controllers/products');
 
-const { isAuthenticated } = require("../middleware/validate");
+const { isAuthenticated } = require("../middleware/authenticate");
 
 router.get('/', getProductsController.getAll);
 router.get('/:id', getProductsController.getProduct);

@@ -4,7 +4,7 @@ const router = require('express').Router();
 
 
 const getCustomersController = require('../controllers/customers');
-const { isAuthenticated } = require('../middleware/authenticate');
+const { isAuthenticated } = require('../middleware/validate');
 
 router.get('/', getCustomersController.getAll);
 router.get('/:id', getCustomersController.getCustomer);

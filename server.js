@@ -23,9 +23,15 @@ app
     secret: process.env.SESSION_SECRET || "secret",
     resave: false,
     saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
-}))
+    store: MongoStore.create({ mongoUrl: process.env.MONGO_URL });
+}));
 
+const MongoStore = require('connect-mongo');
+    // Assuming 'mongoose' is already connected
+    const store = MongoStore.create({
+        client: mongoose.connection.getClient(), // Get the underlying MongoDB client from Mongoose
+        // other options
+    });
 
 app
     .use(bodyParser.json())

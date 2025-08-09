@@ -21,12 +21,17 @@
   "homepage": "https://github.com/jeanoxeant/cse-341-project2#readme",
   "dependencies": {
     "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "express-session": "^1.18.2",
     "express-validator": "^7.2.1",
     "joi": "^17.13.3",
     "mongodb": "^6.18.0",
     "mongoose": "^8.16.5",
+    "passport": "^0.7.0",
+    "passport-github": "^1.1.0",
+    "passport-github2": "^0.1.12",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {

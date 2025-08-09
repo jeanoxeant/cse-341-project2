@@ -1,17 +1,17 @@
 const router = require('express').Router();
-router.post('/', (req, res) => {
-  res.send('New product added');
-  res.send('New customer added');
-});
+const passport = require('passport');
 
 router.use('/', require('./swagger'));
-
-router.get('/', (req, res) => {
-    //#swagger.tags=['Hello World]
-    res.send('Hello World');
-});
-
 router.use('/products', require('./products'));
 router.use('/customers', require('./customers'));
+
+router.get('/login', passport.authenticate('github'), (req, res) => {});
+
+router.get('/logout', function(req, res, next) {
+  req.logout(function(error) {
+    if (error) { return next(error); }
+    res.redirect('/');
+  });
+});
 
 module.exports = router;

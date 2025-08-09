@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 
 };
 
-const getSingle = async (req, res) => {
+const getProduct = async (req, res) => {
     //#swagger.tags=['Hello World]
     const productId = new ObjectId(req.params.id);
     const result = await mongodb.getDatabase().db().collection('products').find({_id: productId});
@@ -67,7 +67,7 @@ const deleteProduct = async (req, res) => {
 
 module.exports = {
     getAll,
-    getSingle,
+    getProduct,
     createProduct,
     updateProduct,
     deleteProduct

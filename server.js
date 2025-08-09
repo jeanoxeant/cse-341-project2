@@ -6,14 +6,18 @@ const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
-const MongoStore = require('connect-mongo');
+//const MongoStore = require('connect-mongo');
 
 //const { swaggerDocs, swaggerUi } = require('swagger');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger.json');
 
 const app = express();
 const port = process.env.PORT || 8000;
 
 //app.use(bodyParser.json());
+
+
 
 app
     .use(bodyParser.json())
@@ -31,13 +35,12 @@ app
         res.setHeader("Access-Control-Allow-Origin", "*");
         res.setHeader(
         'Access-Control-Allow-Headers',
-        'Origin, X-Requested-Width, Content-Type, Accept, Z-Key'
+        'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
     );
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
     })
-    .use(cors({methods: ['GET', 'POST', 'DELTE', 'UPDATE', 'PUT', 'PATCH']}))
-    .use(cors({origin: '*'}))
+    .use(cors({methods: ['GET', 'POST', 'PUT', 'PATCH']})).use(cors({origin: '*'}))
     .use("/", require("./routes/index.js"));
 
 
@@ -63,7 +66,7 @@ passport.deserializeUser((user, done) => {
 app.get('/', (req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : "Logged Out")});
 
 app.get('/github/callback', passport.authenticate('github', {
-    failureRedirect: '/api.docs', session: false}),
+    failureRedirect: '/api.docs', session: true}),
     (req, res) => {
         req.session.user = req.user;
         res.redirect('/');

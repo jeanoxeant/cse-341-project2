@@ -6,6 +6,8 @@ const passport = require('passport');
 const session = require('express-session');
 const GitHubStrategy = require('passport-github2').Strategy;
 const cors = require('cors');
+const MongoStore = require('connect-mongo');
+
 //const { swaggerDocs, swaggerUi } = require('swagger');
 
 const app = express();
